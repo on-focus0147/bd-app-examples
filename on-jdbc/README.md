@@ -2,7 +2,7 @@
 
 # Технологии
 * java. sql для доступа к Connection
-* slf4j-api для логгирования
+* logback для логгирования. Сконфигурирован ConsoleAppender
 * MarinaDB в качестве БД
 # Запуск в IDE
   1) Запустить БД:
