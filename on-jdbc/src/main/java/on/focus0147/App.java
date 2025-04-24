@@ -16,7 +16,7 @@ public class App {
         UserDao userDao = new UserDaoImpl();
 
         for(User user : userDao.findAll()){
-            LOGGER.info("USER {}" ,user.name());
+            LOGGER.info("USER : {}" ,user.name());
             transactionDao
                     .findByUserId(user.id())
                     .forEach(transaction ->
