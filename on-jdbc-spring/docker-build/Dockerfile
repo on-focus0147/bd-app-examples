@@ -1,0 +1,12 @@
+FROM mariadb:11.7.2
+
+COPY scripts /docker-entrypoint-initdb.d/
+
+ENV MARIADB_ROOT_PASSWORD=root
+
+ENV MARIADB_USER=myuser
+ENV MARIADB_PASSWORD=mypassword
+ENV MARIADB_DATABASE=mydb
+
+ENV PORT 3306
+EXPOSE 3306
