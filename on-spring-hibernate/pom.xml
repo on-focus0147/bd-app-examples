@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>on.focus0147</groupId>
-  <artifactId>on-jpa-hibernate</artifactId>
+  <artifactId>on-spring-hibernate</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>on-jpa-hibernate</name>
+  <name>on-spring-hibernate</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
