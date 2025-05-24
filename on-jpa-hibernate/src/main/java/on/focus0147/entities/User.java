@@ -54,11 +54,6 @@ public class User extends AbstractEntity{
         return financialInstruments;
     }
 
-    public User withId(Integer id){
-        this.id = id;
-        return this;
-    }
-
     public User withName(String name) {
         this.name = name;
         return this;

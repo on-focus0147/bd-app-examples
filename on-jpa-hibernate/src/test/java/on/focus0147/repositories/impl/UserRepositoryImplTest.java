@@ -106,8 +106,8 @@ class UserRepositoryImplTest extends TestContainersBase {
     }
 
     @Test
-    void testFindWithDependenciesByQuery(){
-        Optional<User> optionalUser = userRepository.findWithDependenciesByQuery(1);
+    void testFindWithDependenciesByNamedQuery(){
+        Optional<User> optionalUser = userRepository.findWithDependenciesByNamedQuery(1);
         Assertions.assertTrue(optionalUser.isPresent());
         User user = optionalUser.get();
         Assertions.assertEquals("Alex Smith", user.getName());

@@ -10,7 +10,7 @@ public interface UserRepository {
     List<User> findAll();
     Optional<User> findById(Integer id);
     Optional<User> findByEmail(String email);
-    Optional<User> findWithDependenciesByQuery(Integer id);
+    Optional<User> findWithDependenciesByNamedQuery(Integer id);
     Optional<User> findWithDependenciesByHibernate(Integer id);
     //insert
     User add(User user);

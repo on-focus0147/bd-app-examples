@@ -61,7 +61,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<User> findWithDependenciesByQuery(Integer id) {
+    public Optional<User> findWithDependenciesByNamedQuery(Integer id) {
         User user = sessionFactory.getCurrentSession()
                 .createNamedQuery("User.findWithDetails", User.class)
                 .setParameter("id", id).uniqueResult();
