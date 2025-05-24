@@ -4,6 +4,7 @@ import on.focus0147.configuration.HibernateConfiguration;
 import on.focus0147.configuration.TestContainersBase;
 import on.focus0147.entities.Payment;
 import on.focus0147.entities.User;
+import on.focus0147.repositories.PaymentRepository;
 import on.focus0147.repositories.UserRepository;
 import org.hibernate.LazyInitializationException;
 import org.junit.jupiter.api.Assertions;
@@ -23,6 +24,9 @@ class UserRepositoryImplTest extends TestContainersBase {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    PaymentRepository payRepository;
 
     @Test
     void testFindAll() {
@@ -88,10 +92,17 @@ class UserRepositoryImplTest extends TestContainersBase {
     @Test
     @Transactional
     void testDropById() {
-        userRepository.dropById(1);
-        Optional<User> optionalDroppedUser = userRepository.findById(1);
+        int userId = 1;
+        Optional<User> optionalUser = userRepository.findById(userId);
+        Assertions.assertTrue(optionalUser.isPresent());
+
+        userRepository.dropById(userId);
+        Optional<User> optionalDroppedUser = userRepository.findById(userId);
         Assertions.assertFalse(optionalDroppedUser.isPresent());
-        //
+        Payment p1 = payRepository.getById(1);
+        Assertions.assertNull(p1);
+        Payment p2 = payRepository.getById(2);
+        Assertions.assertNull(p2);
     }
 
     @Test

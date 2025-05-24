@@ -13,8 +13,7 @@ import java.util.Set;
         query="select distinct u from User u " +
                 "left join fetch u.payment p " +
                 "left join fetch u.financialInstruments f " +
-                "where u.id = :id "// +
-              //  "group by p"
+                "where u.id = :id "
 )
 public class User extends AbstractEntity{
     @Serial
