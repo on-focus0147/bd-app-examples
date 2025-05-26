@@ -49,6 +49,12 @@ class UserRepositoryImplTest extends TestContainersBase {
     }
 
     @Test
+    void testFindById2() {
+        Optional<User> optionalUser = userRepository.findById(100);
+        Assertions.assertFalse(optionalUser.isPresent());
+    }
+
+    @Test
     void testFindByEmail(){
         Optional<User> optionalUser = userRepository.findByEmail("alex.smith@example.com");
         Assertions.assertTrue(optionalUser.isPresent());

@@ -1,7 +1,6 @@
 package on.focus0147.entities;
 
 import jakarta.persistence.*;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serial;
 import java.util.HashSet;
@@ -45,7 +44,6 @@ public class User extends AbstractEntity{
         return encryptedPassword;
     }
 
-    @Transactional
     public Set<Payment> getPayments() {
         return payment;
     }

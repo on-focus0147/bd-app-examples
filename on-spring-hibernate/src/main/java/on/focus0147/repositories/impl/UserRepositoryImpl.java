@@ -5,13 +5,13 @@ import on.focus0147.entities.User;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component("userRepository")
+@Repository("userRepository")
 public class UserRepositoryImpl implements UserRepository {
 
     private final SessionFactory sessionFactory;
