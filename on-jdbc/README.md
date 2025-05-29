@@ -12,6 +12,4 @@
           ```docker build -t marinadb1172-finance-assistant:1.0 .```
        2) запустить с помощью 
        ```docker run --name finance-assistant10 -d -p 3306:3306 marinadb1172-finance-assistant:1.0```
-       3) Либо запустить с репо
-        ```docker run --name finance-assistant10 -d -p 3306:3306 onfocus0147/marinadb1172-finance-assistant::latest```
   2) Запустить в IDE Run на App
