@@ -1,0 +1,9 @@
+### IntelliJ IDEA ###
+.gigaide/
+.idea/.*
+.idea/*
+*.iws
+*.iml
+*.ipr
+/target/*.*
+/target/*
