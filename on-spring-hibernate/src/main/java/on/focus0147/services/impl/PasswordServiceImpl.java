@@ -1,12 +1,11 @@
 package on.focus0147.services.impl;
 
+import jakarta.annotation.PostConstruct;
 import on.focus0147.services.PasswordService;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
 
 @Service("passwordService")
 @PropertySource("classpath:encryption/pass.properties")
